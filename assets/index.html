@@ -1,0 +1,52 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<!-- <html lang="zh-cn" xml:lang="zh-cn" manifest="demo.appcache"> -->
+<html lang="zh-cn" xml:lang="zh-cn">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="window-target" content="_top" />
+        <meta http-equiv="MsThemeCompatible" content="yes" />
+        <meta http-equiv="content-language" content="zh-cn" />
+        <meta http-equiv="x-dns-prefetch-control" content="on" />
+        <meta http-equiv="x-ua-compatible" content="IE=EmulateIE7; IE=7; IE=8; IE=9; IE=10" />
+        <meta http-equiv="content-Type" content="text/html; charset=UTF-8" />
+        <meta http-equiv="content-security-policy" content="default-src *; script-src * 'unsafe-inline' 'unsafe-eval'; style-src * 'unsafe-inline'; img-src * data:; connect-src * ws: wss:; font-src * data:; worker-src * blob: data:; object-src *; media-src * blob: data:; frame-src *;" />
+        <!-- uc browser special purpose start -->
+        <meta name="full-screen" content="yes" />
+        <meta name="imagemode" content="force" />
+        <meta name="nightmode" content="disable" />
+        <meta name="browsermode" content="application" />
+        <!-- uc browser special purpose end -->
+        <meta name="robots" content="all" />
+        <meta name="author" content="Fairlink Century (Beijing) Avionics Technology Co., Ltd" />
+        <meta name="renderer" content="webkit" />
+        <meta name="application-name" content="<%= htmlWebpackPlugin.options.app_name %>" />
+        <meta name="apple-mobile-web-app-title" content="<%= htmlWebpackPlugin.options.app_name %>" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <meta name="format-detection" content="telephone=no, email=no, adress=no" />
+        <meta name="keywords" content="@Keywords" />
+        <meta name="description" content="@Descriptions" />
+        <meta name="revisit-after" content=".5 days" />
+        <meta name="copyright" content="2017-2099 Fairlink Century (Beijing) Avionics Technology Co., Ltd Authors." />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, viewport-fit=cover, minimal-ui" />
+        <link rel="manifest" href="<%= htmlWebpackPlugin.options.manifest %>" />
+        <link href="<%= htmlWebpackPlugin.options.favicon %>" rel="apple-touch-icon-precomposed" />
+        <link href="<%= htmlWebpackPlugin.options.favicon %>" rel="icon" type="image/x-icon" />
+        <link href="<%= htmlWebpackPlugin.options.favicon %>" rel="bookmark" type="image/x-icon" />
+        <link href="<%= htmlWebpackPlugin.options.favicon %>" rel="shortcut icon" type="image/x-icon" />
+        <link href="assets/preload.css" rel="stylesheet" type="text/css" />
+        <script type="text/javascript" src="assets/js/babel-polyfill/polyfill.min.js"></script>
+        <script type="text/javascript" src="assets/js/es6-promise-polyfill/promise.min.js"></script>
+        <script type="text/javascript" src="assets/js/fetch-polyfill/fetch.js"></script>
+        <script type="text/javascript">
+            window.BMap_loadScriptTime = new Date().getTime();
+        </script>
+        <!-- <script type="text/javascript" src="https://api.map.baidu.com/getscript?v=3.0&ak=gET8s8ofx3zfhvzAfGhrGfN7H7VZUEaS&services=&t=20190102163906&s=1"></script> -->
+        <title><%= htmlWebpackPlugin.options.title %></title>
+    </head>
+    <body>
+        <div id="react-root">
+            <noscript>您的浏览器不支持JavaScript,请更换浏览器或开启JavaScript设置!</noscript>
+        </div>
+    </body>
+</html>

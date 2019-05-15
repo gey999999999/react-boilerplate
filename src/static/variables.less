@@ -1,0 +1,67 @@
+// Responsive variables
+// =============================================================================
+
+// Breakpoint
+// -----------------------------------------------------------------------------
+
+@breakpoint-small:            601px;  // 0 - 600px
+@breakpoint-medium:           800px; // 601 - 800px
+@breakpoint-large:            1024px; // 769 - 1024px
+@breakpoint-xl:               1280px; // 1025 - 1280px
+@breakpoint-xxl:              1440px; // 1281 -1440px
+
+@beethoven-device-height:     2560px;
+@beethoven-device-width:      1600px;
+
+@breakpoint-small-max:        @breakpoint-small;
+@breakpoint-md:               @breakpoint-small-max;
+
+@breakpoint-medium-min:       (@breakpoint-small + 1);
+@breakpoint-medium-max:       @breakpoint-medium;
+
+@breakpoint-large-min:        (@breakpoint-medium + 1);
+@breakpoint-large-max:        @breakpoint-large;
+
+@breakpoint-xl-min:           (@breakpoint-large + 1);
+@breakpoint-xl-max:           @breakpoint-xl;
+
+@breakpoint-xxl-min:          (@breakpoint-xl + 1);
+@breakpoint-xxl-max:          @breakpoint-xxl;
+
+
+// Media Queries
+// NOTE '~' in the beginning - media query must be escaped
+// -----------------------------------------------------------------------------
+
+@screen:        ~"only screen";
+
+//@author: hiroki.zhu
+//检测是否二倍屏(目前市面上的移动设备基本上都是二倍屏,这里预留出来这个工具常量,用于未来做向下兼容)
+//参照:
+//https://developer.mozilla.org/zh-CN/docs/Web/Guide/CSS/Media_queries
+//http://caibaojian.com/css3/values/resolution/dpi.htm
+//一般认为,普通屏幕通常包含96dpi,将2倍于此的屏幕称之为高分屏,即大于等于192dpi的屏幕,比如Mac视网膜屏就达到了192dpi(即2dppx),打印时一般会需要更大的dpi
+// @retina:        ~"@{screen} and (-webkit-min-device-pixel-ratio: 2), (min--moz-device-pixel-ratio: 2), (min-resolution: 2dppx), (min-resolution: 192dpi)";
+// @normal-screen: ~"@{screen} and (-webkit-max-device-pixel-ratio: 1), (max--moz-device-pixel-ratio: 1), (max-resolution: 1dppx), (max-resolution: 72dpi)";
+
+//横竖屏检测,目前暂时用不到,且部分设备/浏览器下<键盘弹出>时使用css判断会不准👿
+// @landscape:     ~"@{screen} and (orientation: landscape)";
+// @portrait:      ~"@{screen} and (orientation: portrait)";
+
+@small-up:      ~"@{screen}";
+@small-only:    ~"@{screen} and (max-width: @{breakpoint-small-max})";
+
+@medium-up:     ~"@{screen} and (min-width:@{breakpoint-medium-min}), @{beethoven-portrait}";
+@medium-only:   ~"@{screen} and (min-width:@{breakpoint-medium-min}) and (max-width:@{breakpoint-medium-max}), @{beethoven-portrait}";
+
+@large-up:      ~"@{screen} and (min-width:@{breakpoint-large-min})";
+@large-only:    ~"@{screen} and (min-width:@{breakpoint-large-min}) and (max-width:@{breakpoint-large-max})";
+
+@xl-up:         ~"@{screen} and (min-width:@{breakpoint-xl-min})";
+@xl-only:       ~"@{screen} and (min-width:@{breakpoint-xl-min}) and (max-width:@{breakpoint-xl-max})";
+
+@xxl-up:        ~"@{screen} and (min-width:@{breakpoint-xxl-min})";
+@xxl-only:      ~"@{screen} and (min-width:@{breakpoint-xxl-min}) and (max-width:@{breakpoint-xxl-max})";
+
+@beethoven-portrait: ~"@{screen} and (device-width: @{beethoven-device-width}) and (device-height: @{beethoven-device-height})";
+@beethoven-landscape: ~"@{screen} and (device-width: @{beethoven-device-height}) and (device-height: @{beethoven-device-width})";

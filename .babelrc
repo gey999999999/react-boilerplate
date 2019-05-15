@@ -1,0 +1,34 @@
+{
+    "presets": [
+        "env",
+        "react",
+        "stage-0"
+    ],
+    "plugins": [
+        "transform-runtime",
+        "transform-decorators-legacy",
+        "syntax-dynamic-import",
+        "dynamic-import-webpack",
+        [
+            "import",
+            {
+                "style": "less",
+                "libraryName": "antd-mobile"
+            }
+        ],
+        [
+            "module-resolver",
+            {
+                "root": ["./src"],
+                "extensions": [".js", ".jsx"]
+            }
+        ]
+    ],
+    "env": {
+        "start": {
+            "presets": [
+                "react-hmre"
+            ]
+        }
+    }
+}
